@@ -1,0 +1,29 @@
+<h1>Listing weathers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Lat</th>
+      <th>Lon</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @weathers.each do |weather| %>
+      <tr>
+        <td><%= weather.name %></td>
+        <td><%= weather.lat %></td>
+        <td><%= weather.lon %></td>
+        <td><%= link_to 'Show', weather %></td>
+        <td><%= link_to 'Edit', edit_weather_path(weather) %></td>
+        <td><%= link_to 'Destroy', weather, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Weather', new_weather_path %>

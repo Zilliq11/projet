@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :weathers
+
   resources :cities
 
   resources :students
