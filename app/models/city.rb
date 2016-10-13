@@ -4,8 +4,6 @@ class City < ActiveRecord::Base
   
   before_validation :geocode
   
-  before_validation :forecast
-  
   private
   
   def geocode
@@ -15,9 +13,4 @@ class City < ActiveRecord::Base
       self.lon=places.first.lon
     end
   end
-  
-  def forecast
-    forecast = ForecastIO.forecast(self.lat, self.lon, params: { units: 'si' })
-  end
-  
 end
