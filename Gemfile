@@ -38,6 +38,7 @@ gem 'pg', '~> 0.18.4', group: :production
 # forecast_io
 gem 'forecast_io', '~> 2.0', '>= 2.0.1'
 
+gem 'rails_12factor'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
