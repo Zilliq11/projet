@@ -12,5 +12,10 @@ class City < ActiveRecord::Base
       self.lat=places.first.lat
       self.lon=places.first.lon
     end
+    forecast = ForecastIO.forecast(self.lat, self.long, params: { units: 'si' })
+    self.summary = self.currently.summary
+    self.precipProbability = self.currently.precipProbability
+    self.temperature = self.currently.temperature
+    self.pressure = self.currently.pressure
   end
 end
