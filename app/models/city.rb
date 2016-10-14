@@ -4,6 +4,14 @@ class City < ActiveRecord::Base
 
   before_validation :geocode
 
+  def weather
+    forecast = ForecastIO.forecast(self.lat, self.lon, params: { units: 'si' })
+    self.summary = forecast.currently.summary
+    self.precipProbability = forecast.currently.precipProbability
+    self.temperature = forecast.currently.temperature
+    self.pressure = forecast.currently.pressure
+  end
+  
   private
 
   def geocode
@@ -12,10 +20,5 @@ class City < ActiveRecord::Base
       self.lat=places.first.lat
       self.lon=places.first.lon
     end
-    forecast = ForecastIO.forecast(self.lat, self.lon, params: { units: 'si' })
-    self.summary = forecast.currently.summary
-    self.precipProbability = forecast.currently.precipProbability
-    self.temperature = forecast.currently.temperature
-    self.pressure = forecast.currently.pressure
   end
 end
