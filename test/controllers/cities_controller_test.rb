@@ -6,16 +6,18 @@ class CitiesControllerTest < ActionController::TestCase
   end
 
   test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:cities)
+    VCR.use_cassette("forecast_io") do
+      get :index
+      assert_response :success
+      assert_not_nil assigns(:cities)
+    end
   end
 
   test "should get new" do
     get :new
     assert_response :success
   end
-  
+
   test "should create city" do
     VCR.use_cassette("nominatim") do
       assert_difference('City.count') do
@@ -26,8 +28,10 @@ class CitiesControllerTest < ActionController::TestCase
   end
 
   test "should show city" do
-    get :show, id: @city
-    assert_response :success
+    VCR.use_cassette("forecast_io") do
+      get :show, id: @city
+      assert_response :success
+    end
   end
 
   test "should get edit" do
@@ -37,8 +41,10 @@ class CitiesControllerTest < ActionController::TestCase
 
   test "should update city" do
     VCR.use_cassette("nominatim") do
-      patch :update, id: @city, city: { lat: @city.lat, lon: @city.lon, name: @city.name }
-      assert_redirected_to city_path(assigns(:city))
+      VCR.use_cassette("forecast_io") do
+        patch :update, id: @city, city: { lat: @city.lat, lon: @city.lon, name: @city.name }
+        assert_redirected_to city_path(assigns(:city))
+      end
     end
   end
 
