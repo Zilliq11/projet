@@ -6,10 +6,10 @@
       <th>Name</th>
       <th>Lat</th>
       <th>Lon</th>
-      <th>Summary</th>
-      <th>Precipitation probability</th>
-      <th>Temperature</th>
-      <th>Pressure</th>
+      <!--<th>Summary</th>-->
+      <!--<th>Precipitation probability</th>-->
+      <!--<th>Temperature</th>-->
+      <!--<th>Pressure</th>-->
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,10 +20,6 @@
         <td><%= city.name %></td>
         <td><%= city.lat %></td>
         <td><%= city.lon %></td>
-        <td><%= city.summary %></td>
-        <td><%= city.precipProbability %></td>
-        <td><%= city.temperature %></td>
-        <td><%= city.pressure %></td>
         <td><%= link_to 'Show', city %></td>
         <td><%= link_to 'Edit', edit_city_path(city) %></td>
         <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
