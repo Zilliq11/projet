@@ -1,7 +1,5 @@
-require 'forecast_io'
 class CitiesController < ApplicationController
   before_action :set_city, only: [:show, :edit, :update, :destroy]
-    require 'forecast_io'
 
 
   # GET /cities
@@ -16,7 +14,7 @@ class CitiesController < ApplicationController
   # GET /cities/1
   # GET /cities/1.json
   def show
-    @city = City.forecast_io
+    @forecasts = @city.forecast_io
   end
 
   # GET /cities/new

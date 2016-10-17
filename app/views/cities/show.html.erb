@@ -16,23 +16,23 @@
 </p>
 
 <p>
-  <strong>Lon:</strong>
-  <%= @city.summary %>
+  <strong>Summary:</strong>
+  <%= @forecasts[:summary] %>
 </p>
 
 <p>
-  <strong>Lon:</strong>
-  <%= @city.precipProbability %>
+  <strong>Precipitation Probability:</strong>
+  <%= @forecasts[:precipProbability] %>
 </p>
 
 <p>
-  <strong>Lon:</strong>
-  <%= @city.temperature %>
+  <strong>Temperature:</strong>
+  <%= @forecasts[:temperature] %>
 </p>
 
 <p>
-  <strong>Lon:</strong>
-  <%= @city.pressure %>
+  <strong>Pressure:</strong>
+  <%= @forecasts[:pressure] %>
 </p>
 
 <%= link_to 'Edit', edit_city_path(@city) %> |
