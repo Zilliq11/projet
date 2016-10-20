@@ -1,8 +1,10 @@
 <p>This is the partial for view 1.</p>
 
+Search: <input ng-model="$ctrl.query" />
+
 <ul>
-   <li ng-repeat="student in students">
-     <span>{{student.name}}</span>
-     <p>{{student.surname}}</p>
-   </li>
+  <li ng-repeat="student in students | filter: $ctrl.query">
+    <span>{{student.name}}</span>
+    <p>{{student.surname}}</p>
+  </li>
 </ul>
