@@ -17,7 +17,6 @@
     "protractor": "^3.2.2"
   },
   "scripts": {
-    "start": "node scripts/web-server.js"
     "postinstall": "bower install",
 
     "prestart": "npm install",
