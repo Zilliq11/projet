@@ -25,7 +25,7 @@ class CityTest < ActiveSupport::TestCase
   
   test 'weather forecast' do 
      VCR.use_cassette("weather") do
-       weather = cities(:one).weather
+       weather = cities(:one).forecast_io
      end
   end
  
