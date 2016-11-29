@@ -14,7 +14,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-table {                   //ou???
+table {                      //a voir
   border-collapse: collapse;
   border-spacing: 0;
   margin-left: 5%;
@@ -27,33 +27,33 @@ h1{
    text-align: left;
  }
 
- h2{
-   margin-top: 60px;
+ h2{                      //a voir
+   margin-top: 60px;      
    margin-left: 15px;
  }
 
- td, th {
+ td, th {                      //a voir
  	padding: 15px;
   margin-left: 35%;
   text-align: center;
   }
 
-  h3{
+  h3{                      //a voir
   button-align: center;
   margin-left: 46%;
   }
 
-  .navbar-inverse .navbar-nav > li > a {
+  .navbar-inverse .navbar-nav > li > a {                      //a voir
   color: #140;
  }
 
- .navbar-inverse .navbar-brand {
+ .navbar-inverse .navbar-brand {                      //a voir
  	color: #140;
  }
 
- .navbar-inverse {
- 	background-color: #FF8C00;
- 	border-color: #FF8C00;
+ .navbar-inverse {                      
+ 	background-color: #FF8C00;//a voir
+ 	border-color: #FF8C00;//a voir
  }
 
 .btn{
