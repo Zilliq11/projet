@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.darksky.net/forecast/87d681b7122ca0e8d65670fda918d1b5/1.5,1.5?units=si
+    uri: https://api.darksky.net/forecast/ad3cb7c67cdc82962ac4d63dd1be9f17/37.8267,-122.4233
     body:
       encoding: US-ASCII
       string: ''
