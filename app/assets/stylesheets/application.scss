@@ -14,46 +14,47 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-table {                      //a voir
+table {
   border-collapse: collapse;
   border-spacing: 0;
-  margin-left: 5%;
+  margin-left: 10px;
 }
 
 h1{
    margin-top: 10px;
-   margin-bottom: 40px;   //a voir
+   margin-bottom: 40px;
    margin-left: 10px;
    text-align: left;
  }
 
- h2{                      //a voir
+ h2{                      //a voir pour city
    margin-top: 60px;      
    margin-left: 15px;
+   text-align: center;
  }
 
- td, th {                      //a voir
+ td, th {
  	padding: 15px;
-  margin-left: 35%;
+  margin-left: 10px;
   text-align: center;
   }
 
-  h3{                      //a voir
-  button-align: center;
+  h3{                      //a voir pour city
+  button-align: right;
   margin-left: 46%;
   }
 
-  .navbar-inverse .navbar-nav > li > a {                      //a voir
-  color: #140;
+  .navbar-inverse .navbar-nav > li > a {
+  color: #000000;
  }
 
- .navbar-inverse .navbar-brand {                      //a voir
- 	color: #140;
+ .navbar-inverse .navbar-brand {
+ 	color: #000000;
  }
 
  .navbar-inverse {                      
- 	background-color: #FF8C00;//a voir
- 	border-color: #FF8C00;//a voir
+ 	background-color: #FF8C00;
+ 	border-color: #000000;
  }
 
 .btn{
