@@ -54,3 +54,5 @@ gem 'rails_12factor'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+#pour authentification GitHub
+gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
